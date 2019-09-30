@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/17 23:29:27 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 10:25:05 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#
+# Launch a shell from an alpine container, and make sure that you can interact
+# directly with the container via your terminal, and that the container 
+# deletes itself once the shell’s execution is done.
+# The package manager is apk with commands such as update, upgrade and add
+# you can add a metapackate with the most essential of tools with
+# apk add --update alpine-sdk
+# reference -> https://github.com/gliderlabs/docker-alpine/issues/24
+#
+
+docker run --interactive --tty alpine sh

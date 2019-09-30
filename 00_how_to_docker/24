@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    24                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 18:20:00 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 18:21:37 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 
+# Launch a rabbitmq SERVICE that will be named orbital-command. You should
+# define a specific user and password for the RabbitMQ service, they can 
+# be whatevers you want. This service will be on the overmind network.
+# 1. We are creating a service fpr rabbitmq
+# 2. We'll name it 'orbital-command' and attach it to the overlay internal network
+# 3. Let's change the default user and password with their respective environment variables in the RABBITMQ
+#
+
+docker service create --name=orbital-command --network=overmind --env RABBITMQ_DEFAULT_USER=ksenia --env RABBITMQ_DEFAULT_PASS=1234 rabbitmq:latest

@@ -1,0 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    13                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 10:46:03 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 10:46:51 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#
+# Print the environment variables of the spawning-pool container in one command,
+# to be sure that you have configured your container properly
+#
+
+docker exec spawning-pool env

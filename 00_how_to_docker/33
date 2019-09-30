@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    33                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 18:48:41 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 18:54:32 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#
+# Delete all the container images stored on the Char virtual machine, in one command as well.
+# docker image ls - shows all the images on vm
+#
+# rmi - i for the image
+
+docker image rm --force $(docker image ls --quiet)

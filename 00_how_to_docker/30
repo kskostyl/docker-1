@@ -1,0 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    30                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 18:36:22 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 18:38:32 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#
+# Increase the number of copies of the marines service up to twenty, 
+# because there’s never enough Marines to eliminate Zergs. (Remember to take 
+# a look at the tasks and logs of the service, you’ll see, it’s fun.)
+# docker service ps marines
+#
+
+docker service update --replicas=20 marines

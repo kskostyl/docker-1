@@ -1,0 +1,28 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    12                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 10:34:24 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 10:43:32 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#
+# Launch a mysql container as a background task. It should be able to restart 
+# on its own in case of error, and the root password of the database should be
+# Kerrigan. You will also make sure that the database is stored in the hatchery 
+# volume, that the container directly creates a database named zerglings, and 
+# that the container itself is named spawning-pool.
+#
+# To test you must create a different container to see if it's running
+# docker run --detach --name test-wordpress --link spawning-pool:mysql wordpress
+# To verify if it’s linked correctly, enter the test-wordpress container 
+# and look at the content of /etc/hosts:
+# 	 docker exec -it test-wordpress bash
+# 	 cat /etc/hosts
+# 
+
+docker run --detach --name=spawning-pool --volume=hatchery:/mysql --env="MYSQL_ROOT_PASSWORD=Kerrigan" --env="MYSQL_DATABASE=zerlings" --restart=on-failure  mysql:5.7

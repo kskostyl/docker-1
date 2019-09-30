@@ -1,0 +1,18 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    start_server                                       :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 19:13:50 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 19:14:22 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Run the teamspeak server
+
+export LD_LIBRARY_PATH=/opt/teamspeak
+cd /opt/teamspeak
+./ts3server logpath=/data/logs

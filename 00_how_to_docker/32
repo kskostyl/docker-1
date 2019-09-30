@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    32                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kskostyl <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/24 18:40:35 by kskostyl          #+#    #+#              #
+#    Updated: 2019/09/24 18:53:19 by kskostyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# 
+# Force quit and delete all the containers (whatever their status), in one command.
+# docker ps -a -q - lists all the containers ID
+# -a - all
+# -q - displays the id only
+# rm - remove
+# -f - force
+#
+
+docker container rm --force $(docker container ps --all --quiet)
